@@ -1,4 +1,4 @@
-﻿@extends('home.common.app')
+@extends('home.common.app')
 @section('title','shop')
 @section('keywords','shop')
 @section('description','shop')

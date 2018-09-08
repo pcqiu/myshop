@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -24,10 +24,6 @@
     <!-- Modernizr JS -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<script type="text/javascript">
-    var a=document.body.innerHTML;
-    document.body.innerHTML=a.replace(/\ufeff/g,"");
-</script>
 <body>
 <!-- Body main wrapper start -->
 @yield('main')
