@@ -3,14 +3,14 @@ $basedir = str_replace('/clearBOM.php','',str_replace('\\','/',dirname(__FILE__)
 $auto = 1;
 checkdir($basedir);
 function checkdir($basedir){
-        if ($dh = opendir($basedir)) {
-                while (($file = readdir($dh)) !== false) {
-                        if ($file != '.' && $file != '..'){
-                                if (!is_dir($basedir.'/'.$file)) {
-                                        $filename = $basedir.'/'.$file;
+    if ($dh = opendir($basedir)) {
+        while (($file = readdir($dh)) !== false) {
+            if ($file != '.' && $file != '..'){
+                if (!is_dir($basedir.'/'.$file)) {
+                    $filename = $basedir.'/'.$file;
                     echo 'filename:'.$basedir.'/'.$file.checkBOM($filename).'<br>';
                 } else {
-                                        $dirname = $basedir.'/'.$file;
+                    $dirname = $basedir.'/'.$file;
                     checkdir($dirname);
                 }
             }
@@ -20,21 +20,21 @@ function checkdir($basedir){
 }
 
 function checkBOM ($filename) {
-        global $auto;
+    global $auto;
     $contents = file_get_contents($filename);
     $charset[1] = substr($contents, 0, 1);
     $charset[2] = substr($contents, 1, 1);
     $charset[3] = substr($contents, 2, 1);
     if (ord($charset[1]) == 239 && ord($charset[2]) == 187 && ord($charset[3]) == 191) {
-                if ($auto == 1) {
-                        $rest = substr($contents, 3);
+        if ($auto == 1) {
+            $rest = substr($contents, 3);
             rewrite ($filename, $rest);
             return '<font color=red>BOM found,automatically removed.</font>';
         } else {
-                        return '<font color=red>BOM found.</font>';
+            return '<font color=red>BOM found.</font>';
         }
     } else {
-                return 'BOM Not Found.';
+        return 'BOM Not Found.';
     }
 }
 
