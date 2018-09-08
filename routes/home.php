@@ -13,12 +13,12 @@
 
 use Illuminate\Routing\Router;
 
-Route::group([
-    'prefix'        => config('home.route.prefix'),
-    'namespace'     => config('home.route.namespace'),
-    'middleware'    => config('home.route.middleware'),
-], function (Router $router) {
-    $router->get('/', 'HomeController@index');
-});
+//Route::group([
+//    'prefix'        => config('home.route.prefix'),
+//    'namespace'     => config('home.route.namespace'),
+//    'middleware'    => config('home.route.middleware'),
+//], function (Router $router) {
+//    $router->get('/', 'HomeController@index');
+//});
 
 

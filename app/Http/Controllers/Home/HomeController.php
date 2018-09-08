@@ -9,7 +9,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-//        dd(Admin::user()->avatar);
-        dump('welcome');
+        return view('home.index');
     }
 }
