@@ -1,7 +1,7 @@
 @extends('home.common.app')
-@section('title','shop')
-@section('keywords','shop')
-@section('description','shop')
+@section('title','pcqiu-shop')
+@section('keywords','pcqiu-shop')
+@section('description','pcqiu-shop')
 @section('main')
 <div class="wrapper">
 <!-- START HEADER SECTION -->
@@ -358,7 +358,7 @@
                         <h5 class="title"><a href="product-details.html">3d laser cut models</a></h5>
                         <!-- Price Ratting -->
                         <div class="price-ratting fix">
-                            <span class="price float-left"><span class="new">€185.00</span><span class="old">€125..00</span></span>
+                            <span class="price float-left"><span class="new">￥185.00</span><span class="old">€125..00</span></span>
                             <span class="ratting float-right">
                                 <i class="fa fa-star active"></i>
                                 <i class="fa fa-star active"></i>
