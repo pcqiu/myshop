@@ -14,7 +14,7 @@
 use Illuminate\Routing\Router;
 
 //Route::group([
-//    'prefix'        => config('home.route.prefix'),
+//    'prefix'        => '',
 //    'namespace'     => config('home.route.namespace'),
 //    'middleware'    => config('home.route.middleware'),
 //], function (Router $router) {

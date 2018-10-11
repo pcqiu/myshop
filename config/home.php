@@ -6,7 +6,7 @@ return [
      * Route configuration.
      */
     'route' => [
-        'prefix' => '',
+        'prefix' => 'home',
         'namespace' => 'Home',
         'middleware' => ['web'],
     ],
